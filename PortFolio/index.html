@@ -1,0 +1,1035 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+</head>
+<style>
+
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: none;
+}
+
+.nav-link.disabled {
+  color: #6c6f7d;
+  pointer-events: none;
+  cursor: default;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.nav-tabs .nav-link.disabled {
+  color: #6c757d;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: rgb(255, 255, 255);
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .dropdown-menu {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0.25rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: rgb(255, 255, 255);
+  background-color: #04203d;
+}
+
+.nav-fill .nav-item {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-justified .nav-item {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tab-content>.tab-pane {
+  display: none;
+}
+
+.tab-content>.active {
+  display: block;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-sm,
+.navbar .container-md,
+.navbar .container-lg,
+.navbar .container-xl {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+}
+
+.navbar-text {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-collapse {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  text-decoration: none;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 575.98px) {
+
+  .navbar-expand-sm>.container,
+  .navbar-expand-sm>.container-fluid,
+  .navbar-expand-sm>.container-sm,
+  .navbar-expand-sm>.container-md,
+  .navbar-expand-sm>.container-lg,
+  .navbar-expand-sm>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar-expand-sm {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-sm .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navbar-expand-sm .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-expand-sm>.container,
+  .navbar-expand-sm>.container-fluid,
+  .navbar-expand-sm>.container-sm,
+  .navbar-expand-sm>.container-md,
+  .navbar-expand-sm>.container-lg,
+  .navbar-expand-sm>.container-xl {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-sm .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-sm .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .navbar-expand-md>.container,
+  .navbar-expand-md>.container-fluid,
+  .navbar-expand-md>.container-sm,
+  .navbar-expand-md>.container-md,
+  .navbar-expand-md>.container-lg,
+  .navbar-expand-md>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-md .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-expand-md>.container,
+  .navbar-expand-md>.container-fluid,
+  .navbar-expand-md>.container-sm,
+  .navbar-expand-md>.container-md,
+  .navbar-expand-md>.container-lg,
+  .navbar-expand-md>.container-xl {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-md .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-md .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .navbar-expand-lg>.container,
+  .navbar-expand-lg>.container-fluid,
+  .navbar-expand-lg>.container-sm,
+  .navbar-expand-lg>.container-md,
+  .navbar-expand-lg>.container-lg,
+  .navbar-expand-lg>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-expand-lg>.container,
+  .navbar-expand-lg>.container-fluid,
+  .navbar-expand-lg>.container-sm,
+  .navbar-expand-lg>.container-md,
+  .navbar-expand-lg>.container-lg,
+  .navbar-expand-lg>.container-xl {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+
+  .navbar-expand-xl>.container,
+  .navbar-expand-xl>.container-fluid,
+  .navbar-expand-xl>.container-sm,
+  .navbar-expand-xl>.container-md,
+  .navbar-expand-xl>.container-lg,
+  .navbar-expand-xl>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-expand-xl {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-xl .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navbar-expand-xl .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-expand-xl>.container,
+  .navbar-expand-xl>.container-fluid,
+  .navbar-expand-xl>.container-sm,
+  .navbar-expand-xl>.container-md,
+  .navbar-expand-xl>.container-lg,
+  .navbar-expand-xl>.container-xl {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-xl .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-xl .navbar-toggler {
+    display: none;
+  }
+}
+
+.navbar-expand {
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.navbar-expand>.container,
+.navbar-expand>.container-fluid,
+.navbar-expand>.container-sm,
+.navbar-expand>.container-md,
+.navbar-expand>.container-lg,
+.navbar-expand>.container-xl {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-expand .navbar-nav {
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.navbar-expand>.container,
+.navbar-expand>.container-fluid,
+.navbar-expand>.container-sm,
+.navbar-expand>.container-md,
+.navbar-expand>.container-lg,
+.navbar-expand>.container-xl {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.navbar-expand .navbar-collapse {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.navbar-expand .navbar-toggler {
+  display: none;
+}
+
+.navbar-light .navbar-brand {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-text a {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-text a:hover,
+.navbar-light .navbar-text a:focus {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-dark .navbar-brand {
+  color: #fff;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: rgba(20, 19, 19, 0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+  color: rgba(12, 12, 12, 0.25);
+}
+
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: rgb(250, 250, 250);
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-text a {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+</style>
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #000000;
+        background-image: linear-gradient(147deg, #46547a 0%, #07049f 74%); color: black;">
+            <a class="navbar-brand" href="#" style="color: black;">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto" style="background-color: #0a0202 0%">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about" style="color: black;">ABOUT <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" style="color: black;">EXPERIENCE</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" style="color: black;">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#skills" style="color: black;">SKILLS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#education" style="color: black;">EDUCATION</a>
+                </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <!--<li>
+                <a href="#contact">Contact</a>
+            </li>-->
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Vikram Viswanath</h1>
+            <h2>Full Stack Developer and Quality Analyst</h2>
+            <a href="Resume.doc" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+
+                        Dedicated and efficient full stack developer where i can able to develop and maintain the applications in both frontend and backend.
+                        I accomplished Full Stack Development course in Guvi at IITM. Deadline Oriented Software Tester with 2 years experience in manual and automation testing.Easily collaborate with developers and project managers  to accompolish milestones.
+                        Solid history of discovering errors,resolving defects,and ensuring client expectations are met with high-quality software solutions..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="December 2018 – Present">
+                <h3>Cognizant Technology Solutions</h3>
+                <h4>Programmer Analyst</h4>
+                <p>
+                    <li>Involved in Manual and Automation Testing in Mainframe and Client Applications.</li>
+                    <li>Studied the requirements documents to understand Project.</li>
+                    <li>Understand testing requirements by studying Test strategy.</li>
+                    <li>Involved in Test cases documents review along with Test lead.</li>
+                    <li>Executed test cases on Software build and prepared test log with daily results.</li>
+                    <li>Reported defects and involved in Defect tracking process.</li>
+                    <li>Involved in modified Software builds and conducted Retesting and Regression testing.</li>
+                   </p>
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        
+        <div class="container">
+          
+            <div class="row">
+                <div class="project shadow-large col-md-5" style="border-left: #000000; width: 535px;height: 300px;">
+                    <div class="project-image">
+                        <a href="https://loving-lumiere-aef030.netlify.app/">
+                            <img border="0" alt="W3Schools" src="project1.JPG" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info" style="padding:0px">
+                        <h3>Sliding Tile Puzzle</h3>
+                        <p>
+                            A Sliding Tile Puzzle is a combination puzzle that challenges a player to slide
+ pieces along certain routes  to establish a certain
+end-configuration. The pieces to be moved may consist of numbers from 1 to 15. The board has
+4x4=16 sections with 15 tiles and 1 empty space.</p>
+                        <a href="https://loving-lumiere-aef030.netlify.app/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="col-md-1"></div>
+
+                <div class="project shadow-large col-md-5" style="border-left-color: #812424; width: 535px;height: 300px;">
+                    <div class="project-image">
+                        <a href="https://zcxx6.sse.codesandbox.io/">
+                            <img border="0" alt="W3Schools" src="event.JPG" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Event Registration</h3>
+                        <p>
+                            Event signup form for a conference with proper form validation.Based on the data
+                            charts were created which will explain how the following ratios are spread out.
+                            1)Male to Female count 
+                            2)Attendees by profession
+                            3)Experience in years-0-2,3-6,6+
+                           </p>
+                        <a href="https://zcxx6.sse.codesandbox.io/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+               
+                <div class="project shadow-large col-md-5" style="width: 535px; height: 300px;">
+                    <div class="project-image">
+                        <a href="https://j1dj0.sse.codesandbox.io/">
+                            <img border="0" alt="W3Schools" src="teachers.png" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Teacher Management App</h3>
+                        <p>
+                            A webpage which is used to manage ,add and update the list of teachers which is build
+                            using ExpressJS<br><br>
+                        <a href="https://j1dj0.sse.codesandbox.io/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="col-md-1"></div>
+
+                <div class="project shadow-large col-md-5" style="width: 535px; height: 300px">
+                    <div class="project-image">
+                        <a href="https://nostalgic-hypatia-d0bfdc.netlify.app/">
+                            <img border="0" class="card-img image2" alt="W3Schools" src="resume.JPG" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Resume Layout</h3>
+                        <p>
+                            
+                     A complex usage of DOM Elements with CSS for a creative resume<br><br>
+                        <a href="https://nostalgic-hypatia-d0bfdc.netlify.app/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+
+
+
+
+
+
+                <div class="project shadow-large col-md-5"style="width: 535px; height: 300px">
+                    <div class="project-image">
+                        <a href="https://mystifying-raman-61416d.netlify.app/">
+                            <img border="0" alt="W3Schools" src="landingpage.JPG" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>JUMBOTRON HEADING</h3>
+                        <p>
+                            A simple web design page created with only HTML and CSS
+                           </p>
+                        <a href="https://mystifying-raman-61416d.netlify.app/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+<div class="col-md-1"></div>
+                <div class="project shadow-large col-md-5" style="width: 535px; height: 300px">
+                    <div class="project-image">
+                        <a href="https://agitated-ride-c51807.netlify.app/">
+                            <img border="0" alt="W3Schools" src="grid.JPG" width="250" height="300">
+                            </a>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Grid Design</h3>
+                        <p>
+                            Designed a page with HTML & CSS that displays grid view of the products in 3x3
+                            Add to cart buttons are displayed at the bottom of the grid
+
+                           </p>
+                        <a href="https://agitated-ride-c51807.netlify.app/">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Selenium Webdriver</li>
+            <li>Node.js</li>
+            <li>C</li>
+            <li>React</li>
+            <li>C++</li>
+            <li>Html</li>
+            <li>CSS</li>
+            <li>BootStrap</li>
+            <li>Manual Testing</li>
+            <li>MYSQL</li>
+            <li>MongoDB</li>
+            <li>ExpressJS</li>
+            <li>Data Structures and Algorithms</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+    <div id="education">
+      <h2 class="heading">Education</h2>
+      <div class="education-block">
+          <h3>Sathyabama Institute of Science and Technology</h3>
+          <span class="education-date">July 2014 - June 2018</span>
+          <h4>Bachelor of Science in Computer Science</h4>
+          <p>
+              Succesfully completed the graduation in Computer Science and Engineering with CGPA 7.1 with no history of backlogs
+             </p>
+      </div>
+      <!-- End .education-block -->
+
+      <div class="education-block">
+          <h3>Violet Matriculation School</h3>
+          <span class="education-date">April 2013 - May 2014</span>
+          <h4>Higher Secondary Education</h4>
+          <ul>
+              <li>
+                 Secured 87 percentage 
+              </li>
+              <li>
+                  Actively Participated in many competitions and sports event conducted during this period 
+              </li>
+              <li>
+                 Had been a part of School management team
+              </li>
+          </ul>
+      </div>
+      <!-- End .education-block -->
+  </div>
+  <div class="education-block">
+      <h3>Chettinad Vidyashram</h3>
+      <span class="education-date">April 2010 - May 2011</span>
+      <h4>Secondary Education</h4>
+      <ul>
+          <li>
+              Secured CGPA 8 in board exams
+          </li>
+          <li>
+              Actively Participated in many elecutions and won awards during this period
+          </li>
+      </ul>
+  </div>
+  <!-- End .education-block -->
+</div>
+  <!-- End #education -->
+
+
+    <!--<div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfg0oaSOQV4gF6SOA4qCO76cUC9GLzXryeDa4EH8rWpkqn1BA/formResponse" target="hiddenFrame" id="mG61Hd" method="POST">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" id="mail" jsname="YPqjbf" name="entry.860011766" class="quantumWizTextinputSimpleinputInput exportInput" placeholder="Your email" required>
+                <textarea name="entry.2090588142" id="message" jsname="YPqjbf" class="quantumWizTextinputSimpleinputInput exportInput"placeholder="Your message" required></textarea>
+                <input type="reset"  value="Submit" onclick='document.forms["mG61Hd"].submit()';re();)></input>
+                <input type="reset"  value="Submit" onclick="re()";)></input>
+            </form>
+            
+        </div>
+        <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;">
+            
+        </iframe> -->
+
+        
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 Vikram Viswanath
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Vikram161996" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/vikram-viswanath-503865160/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/vikram.viswanath.9" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ViswanathVikram" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script>
+        function re(){
+            document.forms["mG61Hd"].submit()
+            alert("Your response has been recorded")
+        }
+        $('#mG61Hd').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfg0oaSOQV4gF6SOA4qCO76cUC9GLzXryeDa4EH8rWpkqn1BA/formResponse',
+                    type: 'post',
+                    data:$('#mG61Hd').serialize(),
+                    success:function(){
+                        // Whatever you want to do after the form is successfully submitted
+                        alert("Your responose has been recorded")
+                    }
+                });
+            });
+        function Reset(){
+
+        document.getElementById("mG61Hd").reset();
+        alert("Your Response has been recorded")
+        }
+        </script>
+</body>
+
+</html>
